@@ -2,14 +2,16 @@ body {
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    background: linear-gradient(180deg, rgb(30, 190, 142) 10%,  rgba(182, 182, 182, 0.425) 10%);
+    height: 100vh;
+    
 }
 #big-container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(180deg, #009688 10%, #d9dbd4 10%);
 }
 #container {
     max-width: 65rem;
