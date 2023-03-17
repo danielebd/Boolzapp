@@ -17,7 +17,7 @@
 
 <body id="background">
     <div id="big-container">
-        <div id="container" class="shrink">
+        <div id="app" class="shrink container">
             <!-- barra contatti -->
             <div id="side-bar">
                 <!-- profile -->
@@ -57,12 +57,12 @@
                 <!-- search -->
                 <!-- open chats -->
                 <div id="open-chats">
-                    <div class="chat row-centered shrink">
+                    <div class="chat row-centered shrink" v-for="(key,index) in contacts">
                         <div class="img-profile img-chat">
-                            <img src="img/avatar_1.jpg" alt="#">
+                            <img :src="contacts[index].avatar" alt="#">
                         </div>
                         <div class="notification-message">
-                            <div class="name-contact">Michele</div>
+                            <div class="name-contact">{{ key.name}}</div>
                             <div class="last-message">Ultimo messaggio inviato</div>
                         </div>
                         <div class="time-access">12.00</div>
