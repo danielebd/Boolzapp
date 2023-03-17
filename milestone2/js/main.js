@@ -192,20 +192,18 @@ createApp({
                 this.newMessage = '';
             }
         },
-        classSent(index) {
-            const { messages } = this.contacts[index];
-            const { status } = messages
-            console.log(status);
-            messages.forEach(status => {
-                if (status === 'sent') {
-                    return 'box-message-sent'
-                }
-                else if (status === 'recived') {
-                    return 'box-message-recived'
-                }
-            });
-
-        }
+        //classSent(index) {
+        //    const { messages } = this.contacts[index];
+        //    const { status } = messages
+        //    console.log(status);
+        //        if (status === 'sent') {
+        //            return 'box-message-sent'
+        //        }
+        //        else if (status === 'recived') {
+        //            return 'box-message-recived'
+        //        }
+//
+        //}
 
     }
 }).mount('#app')

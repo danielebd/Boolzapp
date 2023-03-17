@@ -92,20 +92,8 @@
                 </div>
                 <div id="container-content-chat">
                     <div id="content-chat">
-                        <div class="row-message-sent">
-                            <div class="box-message-sent">
-                                <div class="message">ciao</div>
-                                <div class="time">12.00</div>
-                            </div>
-                        </div>
-                        <div class="row-message-sent">
-                            <div class="box-message-sent">
-                                <div class="message">ciao</div>
-                                <div class="time">12.00</div>
-                            </div>
-                        </div>
-                        <div class="row-message-recived" v-for="(key, index) in contacts[activeChat].messages" >
-                            <div :class="classSent(index)">
+                        <div v-for="(key, index) in contacts[activeChat].messages" :class="((key.status === 'sent') ? 'row-message-sent' : '')">
+                            <div :class="((key.status === 'sent') ? 'box-message-sent' : 'box-message-recived')">
                                 <div class="message">{{ key.message }}</div>
                                 <div class="time" ></div>
                             </div>
