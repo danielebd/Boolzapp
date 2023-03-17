@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body id="background">
+    <div id="big-container">
+        <div id="app" class="shrink container">
+            <!-- barra contatti -->
+            <div id="side-bar">
+                <!-- profile -->
+                <div id="profile" class="shrink row-centered">
+                    <div class="row-centered">
+                        <div class="img-profile">
+                            <img src="img/avatar_io.jpg" alt="">
+                        </div>
+                        <div id="id-profile">Sofia</div>
+                    </div>
+                    <div id="icon-profile">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <!-- profile -->
+                <!-- notification -->
+                <div id="notification" class="shrink row-centered">
+                    <div id="icon-notification">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div id="notification-message">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- notification -->
+                <!-- search -->
+                <div id="search-container" class="shrink row-centered">
+                    <div id="search" class="row-centered">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+                </div>
+                <!-- search -->
+                <!-- open chats -->
+                <div id="open-chats">
+                    <div class="chat row-centered shrink" v-for="(key,index) in contacts">
+                        <div class="img-profile img-chat">
+                            <img :src="contacts[index].avatar" alt="#">
+                        </div>
+                        <div class="notification-message">
+                            <div class="name-contact">{{ key.name }}</div>
+                            <div class="last-message">Ultimo messaggio inviato</div>
+                        </div>
+                        <div class="time-access">12.00</div>
+                    </div>
+                </div>
+                <!-- open chats -->
+
+            </div>
+            <!-- barra contatti -->
+            <!-- contenuto messaggi -->
+            <div id="content" class="column">
+                <div id="info-chat" class="flex shrink">
+                    <div class="row-centered">
+                        <div class="img-profile">
+                            <img src="img/avatar_1.jpg" alt="#">
+                        </div>
+                        <div>
+                            <div class="name-contact">Michele</div>
+                            <div id="last-access">Ultimo accesso oggi alle 12:00</div>
+                        </div>
+                    </div>
+                    <div id="icon-profile" class="row-centered">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div id="container-content-chat">
+                    <div id="content-chat">
+                        <div class="row-message-sent">
+                            <div class="box-message-sent">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
+                            </div>
+                        </div>
+                        <div class="row-message-sent">
+                            <div class="box-message-sent">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
+                            </div>
+                        </div>
+                        <div class="row-message-recived">
+                            <div class="box-message-recived">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="input-text-chat" class="row-centered">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+            <!-- contenuto messaggi -->
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
