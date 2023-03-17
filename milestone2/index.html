@@ -104,9 +104,9 @@
                                 <div class="time">12.00</div>
                             </div>
                         </div>
-                        <div class="row-message-recived">
+                        <div class="row-message-recived" v-for="(key, index) in contacts[0].messages">
                             <div class="box-message-recived">
-                                <div class="message">ciao</div>
+                                <div class="message">{{ key.message }}</div>
                                 <div class="time">12.00</div>
                             </div>
                         </div>

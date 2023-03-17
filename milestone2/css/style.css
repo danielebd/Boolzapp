@@ -204,9 +204,6 @@ a {
 
 /* search */
 /* open chat */
-.img-chat {
-    vertical-align: middle;
-}
 
 .notification-message {
     box-sizing: border-box;
@@ -223,7 +220,7 @@ a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: 80%;
 }
 
 .time-access {
