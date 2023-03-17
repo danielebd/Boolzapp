@@ -215,6 +215,13 @@ a {
     box-sizing: border-box;
     padding: 0 .625rem;
 }
+#profile {
+    height: 3.75rem;
+    background-color: #eaeaea;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 .625rem;
+}
 #last-access{
     color: var(--color-icon)
 }
