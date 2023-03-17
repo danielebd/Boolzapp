@@ -57,7 +57,7 @@
                 <!-- search -->
                 <!-- open chats -->
                 <div id="open-chats">
-                    <div class="chat row-centered shrink" v-for="(key,index) in contacts">
+                    <div class="chat row-centered shrink" v-for="(key,index) in contacts" @click="selectChat(index)">
                         <div class="img-profile img-chat">
                             <img :src="contacts[index].avatar" alt="#">
                         </div>
@@ -104,7 +104,7 @@
                                 <div class="time">12.00</div>
                             </div>
                         </div>
-                        <div class="row-message-recived" v-for="(key, index) in contacts[0].messages">
+                        <div class="row-message-recived" v-for="(key, index) in contacts[activeChat].messages">
                             <div class="box-message-recived">
                                 <div class="message">{{ key.message }}</div>
                                 <div class="time">12.00</div>
