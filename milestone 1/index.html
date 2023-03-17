@@ -57,33 +57,76 @@
                 <!-- search -->
                 <!-- open chats -->
                 <div id="open-chats">
-                            <div class="chat row-centered ">
-                                <div class="img-profile img-chat">
-                                    <img src="img/avatar_1.jpg" alt="#">
-                                </div>
-                                <div class="notification-message">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-message">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="time-access">12.00</div>
+                    <div class="chat row-centered ">
+                        <div class="img-profile img-chat">
+                            <img src="img/avatar_1.jpg" alt="#">
+                        </div>
+                        <div class="notification-message">
+                            <div class="name-contact">Michele</div>
+                            <div class="last-message">Ultimo messaggio inviato</div>
+                        </div>
+                        <div class="time-access">12.00</div>
+                    </div>
+                </div>
+                <!-- open chats -->
+
+            </div>
+            <!-- barra contatti -->
+            <!-- contenuto messaggi -->
+            <div id="content" class="column">
+                <div id="info-chat" class="flex">
+                    <div class="row-centered">
+                        <div class="img-profile">
+                            <img src="img/avatar_1.jpg" alt="#">
+                        </div>
+                        <div>
+                            <div class="name-contact">Michele</div>
+                            <div id="last-access">Ultimo accesso oggi alle 12:00</div>
+                        </div>
+                    </div>
+                    <div id="icon-profile" class="row-centered">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div id="container-content-chat">
+                    <div id="content-chat">
+                        <div class="row-message-sent">
+                            <div class="box-message-sent">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
                             </div>
                         </div>
-                        <!-- open chats -->
-
+                        <div class="row-message-sent">
+                            <div class="box-message-sent">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
+                            </div>
+                        </div>
+                        <div class="row-message-recived">
+                            <div class="box-message-recived">
+                                <div class="message">ciao</div>
+                                <div class="time">12.00</div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <!-- barra contatti -->
-                    <!-- contenuto messaggi -->
-                    <div id="content">
-
-                    </div>
-                    <!-- contenuto messaggi -->
+                </div>
+                <div id="input-text-chat" class="row-centered">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
+            <!-- contenuto messaggi -->
+        </div>
+    </div>
 
 
 
-            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-            <script src="js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
