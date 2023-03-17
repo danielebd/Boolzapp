@@ -104,27 +104,25 @@
                                 <div class="time">12.00</div>
                             </div>
                         </div>
-                        <div class="row-message-recived" v-for="(key, index) in contacts[activeChat].messages">
-                            <div class="box-message-recived">
+                        <div class="row-message-recived" v-for="(key, index) in contacts[activeChat].messages" >
+                            <div :class="classSent(index)">
                                 <div class="message">{{ key.message }}</div>
-                                <div class="time">12.00</div>
+                                <div class="time" ></div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div id="input-text-chat" class="row-centered">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage(activeChat)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
             <!-- contenuto messaggi -->
         </div>
     </div>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>

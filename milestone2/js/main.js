@@ -1,8 +1,14 @@
+
+
 const { createApp } = Vue
+const { DateTime } = luxon;
+
+
 
 createApp({
     data() {
         return {
+            newMessage: '',
             activeChat: 0,
             contacts: [
                 {
@@ -174,6 +180,32 @@ createApp({
         selectChat(index) {
             this.activeChat = index;
             console.log(this.activeChat);
+        },
+        //date() {
+        //    DateTime.now().toString()
+        //    console.log(DateTime.now().toString());
+        //},
+        sendMessage(index) {
+            if (this.newMessage !== '') {
+                const { messages } = this.contacts[index];
+                messages.push({ date: DateTime.now(), message: this.newMessage, status: 'sent' });
+                this.newMessage = '';
+            }
+        },
+        classSent(index) {
+            const { messages } = this.contacts[index];
+            const { status } = messages
+            console.log(status);
+            messages.forEach(status => {
+                if (status === 'sent') {
+                    return 'box-message-sent'
+                }
+                else if (status === 'recived') {
+                    return 'box-message-recived'
+                }
+            });
+
         }
+
     }
 }).mount('#app')
