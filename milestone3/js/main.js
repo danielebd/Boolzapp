@@ -196,12 +196,12 @@ createApp({
         //randomResponce() {
         //    Math.floor(Math.random() * this.recived.length) + 1;
         //},
-        response(index) {
-            const { messages } = this.contacts[index];
-            messages.push({ date: DateTime.now(), message: this.received, status: 'received' })
-        },
         timeOutResponse(index) {
-            setTimeout(this.response(index), 1000)
+            const { messages } = this.contacts[index];
+            const mReceived = this.received;
+            setTimeout(function response() {
+            messages.push({ date: DateTime.now(), message: mReceived, status: 'received' })
+            }, 1000)
         }
     }
 }).mount('#app')
