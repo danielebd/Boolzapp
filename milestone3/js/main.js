@@ -10,7 +10,6 @@ createApp({
         return {
             newMessage: '',
             activeChat: 0,
-            timeOut: 1,
             currentInerval: null,
             contacts: [
                 {
@@ -175,7 +174,7 @@ createApp({
                     ],
                 }
             ],
-            recived: 'ok'
+            received: 'ok'
         }
     },
     methods: {
@@ -188,7 +187,7 @@ createApp({
         //    console.log(DateTime.now().toString());
         //},
         sendMessage(index) {
-            if (this.newMessage !== '') {
+            if (this.newMessage.trim !== '') {
                 const { messages } = this.contacts[index];
                 messages.push({ date: DateTime.now(), message: this.newMessage, status: 'sent' });
                 this.newMessage = '';
@@ -199,10 +198,10 @@ createApp({
         //},
         response(index) {
             const { messages } = this.contacts[index];
-            messages.push({ date: DateTime.now(), message: this.recived, status: 'recived' })
+            messages.push({ date: DateTime.now(), message: this.received, status: 'received' })
         },
-        timeOutResponse() {
-            console.log('ciao');
+        timeOutResponse(index) {
+            setTimeout(this.response(index), 1000)
         }
     }
 }).mount('#app')
