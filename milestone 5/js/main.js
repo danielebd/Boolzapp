@@ -205,13 +205,14 @@ createApp({
         },
 
         search(i) {
-            if(!this.contacts[i].name.toLowerCase().includes(this.searchKey)){
+            if (!this.contacts[i].name.toLowerCase().includes(this.searchKey)) {
                 this.contacts[i].visible = false
             }
-            else if(this.contacts[i].name.toLowerCase().includes(this.searchKey)){
+            else if (this.contacts[i].name.toLowerCase().includes(this.searchKey)) {
                 this.contacts[i].visible = true
             }
             console.log(this.searchKey);
-        }
+        },
+        
     }
 }).mount('#app')

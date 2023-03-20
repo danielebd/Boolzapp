@@ -92,7 +92,7 @@
                 </div>
                 <div id="container-content-chat">
                     <div id="content-chat">
-                        <div v-for="(key, index) in contacts[activeChat].messages" :class="((key.status === 'sent') ? 'row-message-sent' : '')">
+                        <div v-for="(key, index) in contacts[activeChat].messages" :class="((key.status === 'sent') ? 'row-message-sent' : '')" class="context-anchor">
                             <div :class="((key.status === 'sent') ? 'box-message-sent' : 'box-message-recived')">
                                 <div class="message">{{ key.message }}</div>
                                 <div class="time">{{key.date}}</div>
@@ -108,6 +108,7 @@
                 </div>
             </div>
             <!-- contenuto messaggi -->
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
