@@ -182,10 +182,10 @@ createApp({
         selectChat(index) {
             this.activeChat = index;
         },
-        //date() {
-        //    DateTime.now().toString()
-        //    console.log(DateTime.now().toString());
-        //},
+        date() {
+            DateTime.now().toString()
+            console.log(DateTime.now().toString());
+        },
         sendMessage(index) {
             if (this.newMessage.trim !== '') {
                 const { messages } = this.contacts[index];
