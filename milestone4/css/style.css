@@ -233,6 +233,9 @@ a {
 .not-visible {
     display: none;
 }
+.visible {
+    display: block;
+}
 
 /* open chat */
 /* contact */

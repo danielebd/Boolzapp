@@ -181,7 +181,6 @@ createApp({
     methods: {
         selectChat(index) {
             this.activeChat = index;
-            console.log(this.activeChat);
         },
         //date() {
         //    DateTime.now().toString()
@@ -205,5 +204,14 @@ createApp({
             }, 1000)
         },
 
+        search(i) {
+            if(!this.contacts[i].name.toLowerCase().includes(this.searchKey)){
+                this.contacts[i].visible = false
+            }
+            else if(this.contacts[i].name.toLowerCase().includes(this.searchKey)){
+                this.contacts[i].visible = true
+            }
+            console.log(this.searchKey);
+        }
     }
 }).mount('#app')

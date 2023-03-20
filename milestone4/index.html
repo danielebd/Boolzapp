@@ -57,7 +57,7 @@
                 <!-- search -->
                 <!-- open chats -->
                 <div id="open-chats">
-                    <div class="chat row-centered shrink" v-for="(key,index) in contacts" @click="selectChat(index)">
+                    <div class="chat row-centered shrink" v-for="(key,index) in contacts" @click="selectChat(index)" :class="search(index), (key.visible === false) ? 'not-visible' : ''">
                         <div class="img-profile img-chat">
                             <img :src="contacts[index].avatar" alt="#">
                         </div>
