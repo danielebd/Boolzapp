@@ -175,12 +175,7 @@ createApp({
                     ],
                 }
             ],
-            recived: [
-                'sono io',
-                'ciao',
-                'eccolo'
-            ]
-
+            recived: 'ok'
         }
     },
     methods: {
@@ -199,16 +194,15 @@ createApp({
                 this.newMessage = '';
             }
         },
-        randomResponce() {
-            Math.floor(Math.random() * this.recived.length) + 1;
-        },
-        Responce() {
+        //randomResponce() {
+        //    Math.floor(Math.random() * this.recived.length) + 1;
+        //},
+        response(index) {
             const { messages } = this.contacts[index];
-            messages.push({ date: DateTime.now(), message: this.randomResponce(), status: 'recived' })
+            messages.push({ date: DateTime.now(), message: this.recived, status: 'recived' })
         },
         timeOutResponse() {
-            console.log('start');
-            this.currentInerval = setTimeout(randomresponce(), this.timeOut * 1000)
+            console.log('ciao');
         }
     }
 }).mount('#app')
